@@ -68,7 +68,7 @@ export class HttpRequestInterceptor implements HttpInterceptor {
 		);
 	}
 
-	async showRetryToast(retryCount) {
+	async showRetryToast(retryCount: number) {
 		const toast = await this.toastCtrl.create({
 			message: `Retry: ${retryCount}/3`,
 			duration: 1000
@@ -76,7 +76,7 @@ export class HttpRequestInterceptor implements HttpInterceptor {
 		toast.present();
 	}
 
-	async presentFailedAlert(msg) {
+	async presentFailedAlert(msg: string) {
 		const alert = await this.alertCtrl.create({
 			header: 'Oh dear',
 			message: msg,
@@ -91,7 +91,6 @@ export class HttpRequestInterceptor implements HttpInterceptor {
 			switchMap(res => {
 				console.log('in switchmap: ', res);
 				// store token
-
 				const token = res['token'];
 				request = request.clone({
 					setParams: {

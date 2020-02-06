@@ -27,7 +27,19 @@ export class HomePage {
     })
   }
 
-  async showToast(msg) {
+  getRetryFailed() {
+    this.fakeHttp.getRetryFailed().subscribe(res => {
+      console.log('getRetryFailed: ', res);
+    })
+  }
+
+  getAuthFailed() {
+    this.fakeHttp.getAuthFailed().subscribe(res => {
+      console.log('getAuthFailed: ', res);
+    })
+  }
+
+  async showToast(msg: string) {
     const toast = await this.toastCtrl.create({
       message: msg,
       duration: 2000
