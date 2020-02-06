@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FakeHttpService } from '../services/fake-http.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,29 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private fakeHttp: FakeHttpService,
+    private toastCtrl: ToastController
+  ) {}
 
+  getSuccess() {
+    this.fakeHttp.getSuccess().subscribe(res => {
+      console.log('getSuccess: ', res);
+      this.showToast(res['msg']);
+    });
+  }
+
+  getFailed() {
+    this.fakeHttp.getFailed().subscribe(res => {
+      console.log('getFailed: ', res);
+    })
+  }
+
+  async showToast(msg) {
+    const toast = await this.toastCtrl.create({
+      message: msg,
+      duration: 2000
+    });
+    toast.present();
+  }
 }

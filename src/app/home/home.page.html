@@ -1,14 +1,14 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Ionic Http Interceptor
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+	<ion-button (click)="getSuccess()" expand="full">Get Success</ion-button>
+	<ion-button (click)="getFailed()" expand="full">Get Failed</ion-button>
+	<ion-button (click)="getRetryFailed()" expand="full">Get Retry Failed</ion-button>
+	<ion-button (click)="getAuthFailed()" expand="full">Get Auth Failed</ion-button>
 </ion-content>
