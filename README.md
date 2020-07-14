@@ -1,43 +1,46 @@
-# Ionic Angular Http Interceptor
+# :zap: Ionic Angular Http Interceptor
 
-Ionic-Angular tutorial app to experiment with a Http interceptor service.
+- Ionic-Angular tutorial app to experiment with a Http interceptor service.
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+- [:zap: Ionic Angular Http Interceptor](#zap-ionic-angular-http-interceptor)
+  _ [:page_facing_up: Table of contents](#pagefacingup-table-of-contents)
+  _ [:books: General info](#books-general-info)
+  _ [:camera: Screenshots](#camera-screenshots)
+  _ [:signal_strength: Technologies](#signalstrength-technologies)
+  _ [:floppy_disk: Setup](#floppydisk-setup)
+  _ [:computer: Code Examples](#computer-code-examples)
+  _ [:cool: Features](#cool-features)
+  _ [:clipboard: Status & To-do list](#clipboard-status--to-do-list)
+  _ [:clap: Inspiration](#clap-inspiration)
+  _ [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
-* Http Interceptor to handle requests with a loading indication and retry logic.
+- Http Interceptor to handle requests with a loading indication and retry logic.
 
-* Http interceptors are added to the request pipeline in the providers section of `app.module.ts`.
+- Http interceptors are added to the request pipeline in the providers section of `app.module.ts`.
 
-* All code by Simon Grimm of the [Ionic Academy](https://ionicacademy.com/).
+- All code by Simon Grimm of the [Ionic Academy](https://ionicacademy.com/).
 
-## Screenshots
+## :camera: Screenshots
 
 ![Ionic page](./img/error.png)
 
-## Technologies
+## :signal_strength: Technologies
 
-* [Ionic v5.0.0](https://ionicframework.com/)
-* [Angular v8.1.2](https://angular.io/)
-* [Ionic/angular v4.7.1](https://www.npmjs.com/package/@ionic/angular) 
+- [Ionic v5](https://ionicframework.com/)
+- [Angular v10](https://angular.io/)
+- [Ionic/angular v5](https://www.npmjs.com/package/@ionic/angular)
 
-## Setup
+## :floppy_disk: Setup
 
-* To start the server on _localhost://8100_ type: 'ionic serve'
+- To start the server on _localhost://8100_ type: 'ionic serve'
 
-## Code Examples
+## :computer: Code Examples
 
-* helper function to handle a server 401 Unauthorized error
+- helper function to handle a server 401 Unauthorized error
 
 ```typescript
 private handle401Error(request: HttpRequest<any>, next: HttpHandler) {
@@ -58,21 +61,21 @@ private handle401Error(request: HttpRequest<any>, next: HttpHandler) {
 	}
 ```
 
-## Features
+## :cool: Features
 
-* Fake http service. Requires further coding to be fully functional.
+- Fake http service. Requires further coding to be fully functional.
 
-## Status & To-do list
+## :clipboard: Status & To-do list
 
-* Status: Part working
+- Status: Part working
 
-* To-do: There is missing code because it requires a subscription to the Ionic Academy to see the complete code base. I have followed the code shown in the Youtube video - see below.
+- To-do: There is missing code because it requires a subscription to the Ionic Academy to see the complete code base. I have followed the code shown in the Youtube video - see below.
 
-## Inspiration
+## :clap: Inspiration
 
-* [Simon Grimm, Ionic Academy Tutorial: How to Build an Ionic HTTP Loading Interceptor & Retry Logic](https://www.youtube.com/watch?v=IJWCpa_-MeU)
-* [Angular 8 - Basic HTTP Authentication Tutorial & Example](https://jasonwatmore.com/post/2019/06/26/angular-8-basic-http-authentication-tutorial-example)
+- [Simon Grimm, Ionic Academy Tutorial: How to Build an Ionic HTTP Loading Interceptor & Retry Logic](https://www.youtube.com/watch?v=IJWCpa_-MeU)
+- [Angular 8 - Basic HTTP Authentication Tutorial & Example](https://jasonwatmore.com/post/2019/06/26/angular-8-basic-http-authentication-tutorial-example)
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+- Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
