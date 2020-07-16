@@ -37,6 +37,7 @@ import { Route, Redirect } from 'react-router-dom';
 import AllProjects from './pages/AllProjects/AllProjects';
 import AddProject from './pages/AddProject/AddProject';
 import { documentsOutline, documentTextOutline } from 'ionicons/icons';
+import ProjectsContextProvider from './data/ProjectsContextProvider';
 
 const App: React.FC = () => (
 	<IonApp>
@@ -59,24 +60,30 @@ const App: React.FC = () => (
 								<IonLabel>All Projects</IonLabel>
 							</IonItem>
 						</IonMenuToggle>
-            <IonMenuToggle>
+						<IonMenuToggle>
 							<IonItem
 								routerLink="/add-project"
 								routerDirection="none"
 								lines="none"
 							>
-								<IonIcon color="medium" slot="start" icon={documentTextOutline} />
+								<IonIcon
+									color="medium"
+									slot="start"
+									icon={documentTextOutline}
+								/>
 								<IonLabel>Add Project</IonLabel>
 							</IonItem>
 						</IonMenuToggle>
 					</IonList>
 				</IonContent>
 			</IonMenu>
-			<IonRouterOutlet id="projectAppM1">
-				<Route path="/all-projects" component={AllProjects} exact />
-				<Route path="/add-project" component={AddProject} exact />
-				<Redirect to="/all-projects" />
-			</IonRouterOutlet>
+			<ProjectsContextProvider>
+				<IonRouterOutlet id="projectAppM1">
+					<Route path="/all-projects" component={AllProjects} exact />
+					<Route path="/add-project" component={AddProject} exact />
+					<Redirect to="/all-projects" />
+				</IonRouterOutlet>
+			</ProjectsContextProvider>
 		</IonReactRouter>
 	</IonApp>
 );

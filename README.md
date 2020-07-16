@@ -35,7 +35,12 @@
 * [React Dev Tools Chrome extension](https://chrome.google.com/webstore/detail/react*developer*tools/fmkadmapgofadopljbjfkapdkoienihi/related) to help with debugging etc.
 
 * [Ionic Grid](https://ionicframework.com/docs/api/grid)
+* [Ion Cards](https://ionicframework.com/docs/api/card)
+* [Ion Segment](https://ionicframework.com/docs/api/segment)
+* [Ion Modal](https://ionicframework.com/docs/api/modal)
 * [Ion Icons](https://ionicons.com/)
+* [React Context](https://reactjs.org/docs/context.html) to pass data down the component tree
+* [React Hook State](https://reactjs.org/docs/hooks-state.html) to use state
 
 ## :floppy_disk: Setup * Development
 
@@ -63,8 +68,8 @@
 
 ## :clipboard: Status & To Do List
 
-* Status:
-* To-Do:
+* Status: Working simple project list.
+* To-Do: Improve
 
 ## :clap: Inspiration
 
