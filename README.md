@@ -57,21 +57,22 @@
 
 * tbd
 
-```javascript
+```html
 
-</IonList>
 ```
 
 ## :cool: Features
 
-* tbd
+* [Side navigation drawer](https://ionicframework.com/docs/api/menu)
 
 ## :clipboard: Status & To Do List
 
 * Status: Working simple project list.
-* To-Do: Improve
+* To-Do: Improve side menu - add pages?, change project complete button add more project types, change time to createdAt in footer? Add backend storage.
 
 ## :clap: Inspiration
+
+* [https://www.youtube.com/watch?v=xrCr0A9DIMw](https://www.youtube.com/watch?v=xrCr0A9DIMw)
 
 ## :envelope: Contact
 

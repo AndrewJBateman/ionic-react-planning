@@ -17,12 +17,13 @@ import {
 	IonDatetime,
 	IonButton,
 	IonToast,
+	IonIcon,
 } from '@ionic/react';
+import { addOutline, closeOutline } from 'ionicons/icons';
 import { useHistory } from 'react-router-dom';
 import ProjectsContext, { ProjectType } from '../../data/projects-context';
 
 const AddProject: React.FC = () => {
-	
 	const history = useHistory();
 	const projectsCtxt = useContext(ProjectsContext);
 
@@ -70,12 +71,12 @@ const AddProject: React.FC = () => {
 					<IonGrid>
 						<IonRow>
 							<IonCol className="ion-text-center">
-								<IonSegment ref={projectTypeInput}>
+								<IonSegment color="tertiary" ref={projectTypeInput}>
 									<IonSegmentButton value="angular">
 										<IonLabel>Angular</IonLabel>
 									</IonSegmentButton>
 									<IonSegmentButton value="mern">
-										<IonLabel>Mern</IonLabel>
+										<IonLabel>MERN</IonLabel>
 									</IonSegmentButton>
 									<IonSegmentButton value="vue">
 										<IonLabel>Vue</IonLabel>
@@ -86,13 +87,27 @@ const AddProject: React.FC = () => {
 						<IonRow>
 							<IonCol>
 								<IonLabel position="floating">Project Title</IonLabel>
-								<IonInput ref={titleInput} type="text"></IonInput>
+								<IonInput
+									required
+									ref={titleInput}
+									type="text"
+									min="4"
+									max="50"
+									placeholder="Enter at least 4 characters"
+								></IonInput>
 							</IonCol>
 						</IonRow>
 						<IonRow>
 							<IonCol>
 								<IonLabel position="floating">Project Description</IonLabel>
-								<IonInput ref={descriptionInput} type="text"></IonInput>
+								<IonInput
+									required
+									ref={descriptionInput}
+									type="text"
+									min="6"
+									max="200"
+									placeholder="Enter at least 6 characters"
+								></IonInput>
 							</IonCol>
 						</IonRow>
 						<IonRow>
@@ -106,13 +121,16 @@ const AddProject: React.FC = () => {
 								/>
 							</IonCol>
 						</IonRow>
-						<IonRow>
-							<IonCol className="ion-text-center ion-margin-top">
-								<IonButton onClick={addProject} expand="block" fill="outline">
-									Add Project
-								</IonButton>
-							</IonCol>
-						</IonRow>
+						{/* <IonRow className=""> */}
+						{/* <IonCol className="ion-text-center ion-margin-top"> */}
+						<IonButton color="success" onClick={addProject}>
+							<IonIcon icon={addOutline} />
+						</IonButton>
+						<IonButton color="danger" routerLink="/all-projects">
+							<IonIcon icon={closeOutline} />
+						</IonButton>
+						{/* </IonCol> */}
+						{/* </IonRow> */}
 					</IonGrid>
 				</IonContent>
 			</IonPage>

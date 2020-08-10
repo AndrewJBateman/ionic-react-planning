@@ -13,7 +13,6 @@ import {
 	IonCard,
 	IonCardHeader,
 	IonCardTitle,
-	IonCardSubtitle,
 	IonCardContent,
 	IonItem,
 	IonButton,
@@ -23,10 +22,9 @@ import {
 } from '@ionic/react';
 import ProjectsContext, { Project } from '../../data/projects-context';
 import FinishedModal from '../../components/finishedModal';
-import { checkmarkOutline } from 'ionicons/icons';
+import { pencil, checkmarkOutline } from 'ionicons/icons';
 
 const AllProjects: React.FC = () => {
-	
 	const [projectToFinished, setProjectToFinished] = useState<Project>();
 
 	const projectsCtxt = useContext(ProjectsContext);
@@ -50,7 +48,7 @@ const AllProjects: React.FC = () => {
 
 			<IonPage>
 				<IonHeader>
-					<IonToolbar>
+					<IonToolbar color="tertiary">
 						<IonButtons slot="start">
 							<IonMenuButton />
 						</IonButtons>
@@ -65,23 +63,30 @@ const AllProjects: React.FC = () => {
 									<IonCard>
 										<img src={project.imageUrl} alt="Project" />
 										<IonCardHeader>
-											<IonCardTitle>{project.time}</IonCardTitle>
-											<IonCardSubtitle>{project.title}</IonCardSubtitle>
+											{/* <IonCardTitle>{project.time}</IonCardTitle> */}
+											<IonCardTitle>{project.title}</IonCardTitle>
 										</IonCardHeader>
 										<IonCardContent>
 											<p>{project.description}</p>
 											<IonItem lines="none">
-												{	!project.isFinished ?
-													<IonButton
+												{!project.isFinished ? (
+													<IonRow className={classes.CenterElement}>
+														<IonButton color="warning">
+															<IonIcon icon={pencil} />
+														</IonButton>
+														<IonButton
+															onClick={() => openFinishedModal(project)}
+														>
+															<IonIcon icon={checkmarkOutline} />
+														</IonButton>
+													</IonRow>
+												) : (
+													<IonIcon
+														color="success"
 														className={classes.CenterElement}
-														fill="clear"
-														onClick={() => openFinishedModal(project)}
-													>
-														Project Finished
-													</IonButton>
-													:
-													<IonIcon color="success" className={classes.CenterElement} icon={checkmarkOutline}/>
-												}
+														icon={checkmarkOutline}
+													/>
+												)}
 											</IonItem>
 										</IonCardContent>
 									</IonCard>

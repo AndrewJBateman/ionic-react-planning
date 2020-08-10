@@ -36,7 +36,7 @@ import './theme/variables.css';
 import { Route, Redirect } from 'react-router-dom';
 import AllProjects from './pages/AllProjects/AllProjects';
 import AddProject from './pages/AddProject/AddProject';
-import { documentsOutline, documentTextOutline } from 'ionicons/icons';
+import { documentsOutline, addCircleOutline } from 'ionicons/icons';
 import ProjectsContextProvider from './data/ProjectsContextProvider';
 
 const App: React.FC = () => (
@@ -45,7 +45,7 @@ const App: React.FC = () => (
 			<IonMenu side="start" contentId="projectAppM1">
 				<IonHeader>
 					<IonToolbar color="tertiary">
-						<IonTitle>Project App</IonTitle>
+						<IonTitle>App Planner</IonTitle>
 					</IonToolbar>
 				</IonHeader>
 				<IonContent>
@@ -56,8 +56,8 @@ const App: React.FC = () => (
 								routerDirection="none"
 								lines="none"
 							>
-								<IonIcon color="medium" slot="start" icon={documentsOutline} />
-								<IonLabel>All Projects</IonLabel>
+								<IonIcon color="dark" slot="start" icon={documentsOutline} />
+								<IonLabel>Projects List</IonLabel>
 							</IonItem>
 						</IonMenuToggle>
 						<IonMenuToggle>
@@ -66,11 +66,7 @@ const App: React.FC = () => (
 								routerDirection="none"
 								lines="none"
 							>
-								<IonIcon
-									color="medium"
-									slot="start"
-									icon={documentTextOutline}
-								/>
+								<IonIcon color="dark" slot="start" icon={addCircleOutline} />
 								<IonLabel>Add Project</IonLabel>
 							</IonItem>
 						</IonMenuToggle>
