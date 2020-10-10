@@ -6,7 +6,6 @@ import ProjectsContext, {
 } from './projects-context';
 
 const ProjectsContextProvider: React.FC = (props) => {
-
 	const [projects, setProjects] = useState<Project[]>([
 		{
 			id: Math.random().toString(),
@@ -15,7 +14,7 @@ const ProjectsContextProvider: React.FC = (props) => {
 			time: '9:00',
 			projectType: 'angular',
 			imageUrl: '/assets/images/angular.jpg',
-			isFinished: false
+			isFinished: false,
 		},
 		{
 			id: Math.random().toString(),
@@ -24,7 +23,7 @@ const ProjectsContextProvider: React.FC = (props) => {
 			time: '14:00',
 			projectType: 'mern',
 			imageUrl: '/assets/images/mern.jpg',
-			isFinished: false
+			isFinished: false,
 		},
 		{
 			id: Math.random().toString(),
@@ -33,7 +32,7 @@ const ProjectsContextProvider: React.FC = (props) => {
 			time: '11:00',
 			projectType: 'vue',
 			imageUrl: '/assets/images/vue.jpg',
-			isFinished: false
+			isFinished: false,
 		},
 	]);
 
@@ -44,7 +43,7 @@ const ProjectsContextProvider: React.FC = (props) => {
 		projectType: ProjectType
 	) => {
 		let imageUrl = '';
-		switch(projectType) {
+		switch (projectType) {
 			case 'angular':
 				imageUrl = '/assets/images/angular.jpg';
 				break;
@@ -69,7 +68,7 @@ const ProjectsContextProvider: React.FC = (props) => {
 			time,
 			projectType,
 			imageUrl,
-			isFinished: false
+			isFinished: false,
 		};
 
 		setProjects((currentProjects) => {
@@ -95,7 +94,7 @@ const ProjectsContextProvider: React.FC = (props) => {
 	const projectsContext: ProjectsContextModel = {
 		projects,
 		addProject,
-		finishedProject
+		finishedProject,
 	};
 
 	return (

@@ -21,7 +21,7 @@
 
 ## :books: General info
 
-* tbd
+* List of projects from dropdown list of javascript frameworks
 
 ## :camera: Screenshots
 
@@ -67,7 +67,7 @@
 
 ## :clipboard: Status & To Do List
 
-* Status: Working simple project list.
+* Status: Working simple project list. Dependencies updated with no conflicts.
 * To-Do: Improve side menu - add pages?, change project complete button add more project types, change time to createdAt in footer? Add backend storage.
 
 ## :clap: Inspiration
