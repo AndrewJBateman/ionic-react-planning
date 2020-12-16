@@ -30,7 +30,7 @@
 ## :signal_strength: Technologies
 
 * [Ionic/React v5](https://www.npmjs.com/package/@ionic/react) used to create app
-* [React v16](https://reactjs.org/) JavaScript library
+* [React v17](https://reactjs.org/) JavaScript library
 * [Capacitor](https://capacitor.ionicframework.com/docs/) cross*platform app run*time
 * [React Dev Tools Chrome extension](https://chrome.google.com/webstore/detail/react*developer*tools/fmkadmapgofadopljbjfkapdkoienihi/related) to help with debugging etc.
 
@@ -67,7 +67,7 @@
 
 ## :clipboard: Status & To Do List
 
-* Status: Working simple project list. Dependencies updated with no conflicts.
+* Status: Working. Dependencies updated with no conflicts.
 * To-Do: Improve side menu - add pages?, change project complete button add more project types, change time to createdAt in footer? Add backend storage.
 
 ## :clap: Inspiration
