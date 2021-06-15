@@ -1,8 +1,12 @@
 # :zap: Angular React Projects
 
 * App using Ionic with React to store a list of projects.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-**\* Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/ionic-react-planning?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/ionic-react-planning?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/ionic-react-planning?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/ionic-react-planning?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -17,6 +21,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -55,10 +60,47 @@
 
 ## :computer: Code Examples
 
-* tbd
+* `pages/AllProjects.tsx` Ion grid to show list of projects
 
-```html
-
+```tsx
+<IonGrid>
+      {projectsCtxt.projects.map((project) => (
+       <IonRow key={project.id}>
+        <IonCol className="ion-text-center">
+         <IonCard>
+          <img src={project.imageUrl} alt="Project" />
+          <IonCardHeader>
+           {/* <IonCardTitle>{project.time}</IonCardTitle> */}
+           <IonCardTitle>{project.title}</IonCardTitle>
+          </IonCardHeader>
+          <IonCardContent>
+           <p>{project.description}</p>
+           <IonItem lines="none">
+            {!project.isFinished ? (
+             <IonRow className={classes.CenterElement}>
+              <IonButton color="warning">
+               <IonIcon icon={pencil} />
+              </IonButton>
+              <IonButton
+               onClick={() => openFinishedModal(project)}
+              >
+               <IonIcon icon={checkmarkOutline} />
+              </IonButton>
+             </IonRow>
+            ) : (
+             <IonIcon
+              color="success"
+              className={classes.CenterElement}
+              icon={checkmarkOutline}
+             />
+            )}
+           </IonItem>
+          </IonCardContent>
+         </IonCard>
+        </IonCol>
+       </IonRow>
+      ))}
+     </IonGrid>
 ```
 
 ## :cool: Features
@@ -67,13 +109,17 @@
 
 ## :clipboard: Status & To Do List
 
-* Status: Working. Dependencies updated with no conflicts.
+* Status: Working. Do not update dependencies.
 * To-Do: Improve side menu - add pages?, change project complete button add more project types, change time to createdAt in footer? Add backend storage.
 
 ## :clap: Inspiration
 
 * [https://www.youtube.com/watch?v=xrCr0A9DIMw](https://www.youtube.com/watch?v=xrCr0A9DIMw)
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) * you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
