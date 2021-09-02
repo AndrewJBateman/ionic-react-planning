@@ -1,4 +1,4 @@
-# :zap: Ionic React Projects
+# :zap: Ionic React Planning
 
 * App using Ionic with React to store a list of projects.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
@@ -10,7 +10,7 @@
 
 ## :page_facing_up: Table of contents
 
-* [:zap: Ionic React Projects](#zap-anguionic-react-projects)
+* [:zap: Ionic React Planning](#zap-anguionic-react-planning)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
