@@ -1,4 +1,4 @@
-# :zap: Angular React Projects
+# :zap: Ionic React Projects
 
 * App using Ionic with React to store a list of projects.
 * **Note:** to open web links in a new window use: _ctrl+click on link_
@@ -10,7 +10,7 @@
 
 ## :page_facing_up: Table of contents
 
-* [:zap: Angular React Projects](#zap-angular-react-projects)
+* [:zap: Ionic React Projects](#zap-anguionic-react-projects)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
@@ -64,7 +64,7 @@
 
 ```tsx
 <IonGrid>
-      {projectsCtxt.projects.map((project) => (
+ {projectsCtxt.projects.map((project) => (
        <IonRow key={project.id}>
         <IonCol className="ion-text-center">
          <IonCard>
@@ -99,8 +99,8 @@
          </IonCard>
         </IonCol>
        </IonRow>
-      ))}
-     </IonGrid>
+  ))}
+</IonGrid>
 ```
 
 ## :cool: Features
