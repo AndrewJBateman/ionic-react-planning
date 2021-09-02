@@ -10,7 +10,7 @@
 
 ## :page_facing_up: Table of contents
 
-* [:zap: Ionic React Planning](#zap-anguionic-react-planning)
+* [:zap: Ionic React Planning](#zap-ionic-react-planning)
   * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
@@ -114,7 +114,7 @@
 
 ## :clap: Inspiration
 
-* [https://www.youtube.com/watch?v=xrCr0A9DIMw](https://www.youtube.com/watch?v=xrCr0A9DIMw)
+None
 
 ## :file_folder: License
 
